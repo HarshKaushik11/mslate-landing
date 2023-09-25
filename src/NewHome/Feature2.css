@@ -1,0 +1,92 @@
+.block {
+  padding: 6rem 2rem;
+  /* border: 2px solid red; */
+}
+
+.blockDark {
+  background: #e4ebeb;
+  /* background: #f7faff; */
+}
+
+@media screen and (min-width: 1024px) {
+  .blockDark {
+    background: #e4ebeb;
+    /* background: #f8fbff; */
+  }
+}
+
+.feature2 {
+  padding-left: 5rem;
+  display: flex;
+}
+
+.feature2Left {
+  width: 36%;
+  position: relative;
+}
+
+.feature2Right {
+  width: 60%;
+  margin-left: 2rem;
+}
+.featureVideo {
+  display: none;
+  width: 100%;
+}
+
+.feature2Right video {
+  width: 60vw;
+  margin-left: 2rem;
+}
+
+.feature2Card {
+  padding: 21px 26px 30px 15px;
+  cursor: pointer;
+}
+
+.feature2CardActive {
+  padding: 21px 26px 30px 15px;
+  cursor: pointer;
+
+  background: #ffffff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.feature2CardHeading {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+  letter-spacing: 0.3px;
+  color: #253858;
+  padding-bottom: 1.5rem;
+}
+
+.feature2CardDescription {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 24px;
+  /* or 150% */
+  color: #091e42;
+}
+
+@media screen and (max-width: 768px) {
+  .feature2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .feature2Left,
+  .feature2Card,
+  .feature2CardActive {
+    width: 100%;
+  }
+
+  .feature2Right {
+    display: none;
+  }
+
+  .featureVideo {
+    display: block;
+  }
+}

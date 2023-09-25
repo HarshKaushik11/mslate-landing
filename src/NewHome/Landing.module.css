@@ -1,0 +1,263 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 15em 1em 15em;
+}
+
+.landingContent{
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 15em;
+    padding-top: 0em;
+}
+
+.navBtn{
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    border-radius: 48px;;
+    color: white;
+    font-size: 1.1em;
+    background-color: #21C991;
+    font-family: "Poppins";
+    min-width: 10em;
+    text-align: center;
+}
+
+.navBtn:hover{
+    /* padding: 0.6em 2em;
+    border-radius: 48px;; */
+    color: white;
+    /* font-size: 1.2em;
+    background-color: #21C991;
+    font-family: "Poppins"; */
+}
+
+.navBtn:first-child{
+    margin-right: 3em;
+}
+
+.left{
+    /* width: 45%; */
+
+}
+
+.heading{
+    font-family: Poppins;
+    font-size: 5em;
+    font-weight: 600;
+    line-height: 1.3em;
+
+}
+
+.subText{
+    padding-top: 1em;
+    font-size: 1.6em;
+    line-height: 1.5em;
+    width: 85%;
+    font-family: Poppins;
+    color: #1E255EB2;
+}
+
+.logo{
+    width: 4.5em;
+}
+
+
+
+.button{
+    display: flex;
+    align-items: center;
+    font-family: Poppins;
+    font-size: 1.2em;
+    padding: 1.5em 2em;
+    border: none;
+    font-weight: 500;
+    background-color: #21c99133;
+    color: #21C991;
+    border-radius: 48px;
+    max-width: 16em;
+    gap : 1em;
+}
+
+.button:hover{
+    color : #21C991
+}
+
+.btnText{
+    margin-left: 0.5em;
+}
+
+.buttons{
+    padding: 4em 0em;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.hero{
+    width: 45vw;
+}
+
+.googlePlay{
+   margin-top: 5em;
+}
+
+.logoCont{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1em 0em 0em 0em;
+}
+
+.logoTitle{
+    font-size: 1.4em;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-left: 0.5em;
+    font-family: Poppins;
+}
+
+.right{
+        margin-right: -6em;
+}
+
+
+
+@media(max-width:1750px){
+    .button{
+        font-size: 1.2em;
+        padding: 1.5em 2em;
+    }
+}
+
+@media(max-width: 1600px){
+    .navbar{
+        padding: 1em 8em 1em 8em;
+    }
+    .landingContent{
+        padding: 2em 8em;
+        padding-top: 0;
+    }
+}
+
+
+
+@media(max-width:1366px){
+    .heading{
+        font-size: 4em;
+    }
+
+    .button{
+        font-size: 1em;
+        padding: 1.5em 1.5em;
+    }
+
+    .navBtn{
+        font-size: 1em;
+        padding: 0.4em 1em;
+        /* min-width: 6em */
+    }
+}
+
+@media(max-width:1024px){
+    .navbar{
+        padding: 1em 4em 1em 4em;
+    }
+    .landingContent{
+        padding: 2em 4em;
+        padding-top: 0em;
+        justify-content: flex-start;
+    }
+    .left{
+        width: 60%;
+    }
+    .right{
+        margin-left: 0em;
+    }
+    .hero{
+        width: 40vw;
+    }
+    .subText{
+        width: 100%;
+    }
+    .heading{
+        font-size: 3em;
+    }
+    .button{
+        padding: 1em 1.5em;
+        font-size: 0.75em;
+    }
+    .buttons{
+        width: 100%;
+    }
+
+}
+
+@media(max-width:768px){
+    .right{
+        transform: scale(0.6);
+        
+    }
+    .left{
+        /* width: 100%; */
+    }
+}
+
+@media(max-width:600px){
+    .right{
+        display: none;
+    }
+    .logo{
+        width: 4em;
+    }
+    .left{
+        width: 100%;
+        text-align:center;
+    }
+    .navbar{
+        padding: 1.5em 1.5em 1.5em 2em;
+    }
+
+    .logoTitle{
+        font-size: 1.5em;
+        margin-left: 0px;
+    }
+    .navBtn{
+        padding: 0.5em 1em;
+        font-size: 12px;
+        width: 10em;
+        margin-right : -1em !important;
+    }
+    .navBtn:hover{
+        padding: 0.5em 1em;
+        font-size: 12px;
+    }
+    .navBtn:first-child{
+        margin-right: 0.6em; 
+    }
+    
+    .landingContent{
+        padding: 2em 2em;
+        justify-content: center;
+
+    }
+    .buttons{
+        justify-content:center;
+    }
+    .googlePlay{
+        margin-top: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+
+     /* .gplay{
+         width: 14em;
+     } */
+    
+}

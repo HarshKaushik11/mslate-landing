@@ -1,0 +1,102 @@
+.faqSection {
+  padding-bottom: 3rem;
+  background: #e5e5e5;
+}
+
+.faqSection h2 {
+  padding-left: 2rem;
+}
+
+.faqs {
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 2rem; */
+}
+
+.faq {
+  margin: 1.5rem 0;
+  /* padding: 1.5rem; */
+  background: #ffffff;
+  padding: 0.5rem 0;
+}
+
+.faqQuestion {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #081e3f;
+  position: relative;
+  padding-right: 6rem;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.faqQuestion::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+
+  background-image: url("./images/Vector.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.4 ease;
+}
+
+.faqAnswer {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  color: #444444;
+  margin: 2rem;
+  padding-right: 4rem;
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.4 ease;
+}
+
+.faqOpen .faqQuestion {
+  margin-bottom: 1.5rem;
+}
+
+.faqOpen .faqQuestion::after {
+  /* transform: translateY(-50%) rotate(45deg); */
+  background-image: url("./images/NegativeVector.svg");
+}
+
+.faqOpen .faqAnswer {
+  max-height: 100rem;
+  opacity: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .faqSection {
+    padding-bottom: 10rem;
+    background-color: #ffffff;
+  }
+
+  .faq {
+    background: #f7faff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+  }
+
+  .faqQuestion {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 4.2rem;
+    color: #081e3f;
+  }
+
+  .faqAnswer {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    color: #444444;
+  }
+}

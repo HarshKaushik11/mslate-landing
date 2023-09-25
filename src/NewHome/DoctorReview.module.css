@@ -1,0 +1,228 @@
+.container{
+    position: relative;
+    height: 100vh;
+    padding: 0em 6em;
+    font-family: "Poppins", "Montserrat", "sans-serif";
+}
+
+.map{
+
+}
+
+.mapImg{
+    /* position: absolute; */
+    height: 100vh;
+}
+
+
+.faces{
+    position: absolute;
+    top: 45%;right:12em;
+}
+
+.faceImg{
+    width: 10vw;
+}
+
+.topText{
+    position: absolute;
+    top: 0em;
+    right: 8em;
+    text-align: right;
+    width:30%;
+}
+
+.title{
+    font-size: 3em;
+    font-weight: 600;
+    color : #102953;
+    line-height: 1.3em;
+}
+
+.subTitle{
+    padding-top: 1.5em;
+    line-height: 1.8em;
+    font-size: 1.5em;
+    width: 100%;
+    color: #818181;
+}
+
+.cards{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.card1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 35%;
+
+    background-color: white;
+    padding: 3em 5em;
+    border-radius: 0.5em;
+    -webkit-box-shadow: 0px 34px 70px 0px rgba(72,67,129,0.02);
+    -moz-box-shadow: 0px 34px 70px 0px rgba(72,67,129,0.02);
+    box-shadow: 0px 34px 70px 0px rgba(72,67,129,0.02); 
+    z-index: 2;
+    /* animation: appear 0.5s ease-in; */
+}
+
+
+.card2{
+    composes : card1;
+    transform: translate(-47%,-40%);
+    z-index: 1;
+    /* animation: appear2 0.5s ease-in; */
+    /* color: white !important; */
+}
+
+.deets{
+    padding: 2em 0em 0em 0em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonsDiv{
+    width: 100%;
+    display: flex;
+    padding: 2em 0em 0em 0em;
+    justify-content:center;
+    align-items:center;
+    cursor: pointer;
+}
+
+.buttons{
+    border-radius: 50%;
+    padding: 0.4em;
+    border: 0.4px solid rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.buttons:hover{
+    color: white;
+    background-color: #21C991;
+    border: 0.4px solid #21C991;
+}
+
+.review{
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.back, .forward{
+    composes : buttons
+}
+
+.back{
+    margin-right: 1em;
+    border-radius: 50%;
+
+}
+
+.name{
+    color: #21C991;
+    font-size: 1.1em;
+}
+
+
+
+.MyClassEnterActive {
+    transform: translate(-41%,-40%);opacity: 0;
+    transition: 200ms;
+}
+.MyClassEnter {
+    transform: translate(-50%,-50%);opacity: 1;
+    transition: 200ms;
+    
+}
+.MyClassExit {
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 100ms;
+}
+.MyClassExitActive {
+    transform: translate(-55%,-55%);
+    transition: 100ms;
+    opacity: 1;
+    
+}
+
+@media (max-width: 1366px) {
+    .container{
+        padding: 0em 0em;
+    }
+    .topText{
+        right: 2em;
+    }
+    
+}
+
+@media(max-width: 1024px) {
+    .mapImg{
+        height: 70vh;
+    }
+    .card1, .card2{
+        padding: 2.5em 2.5em;
+    }
+}
+
+@media(max-width: 768px){
+    /* .mapImg{
+        display: none;
+    } */
+    .card1{
+        transform: translate(-70%,-90%);
+        width: 50%;
+    }
+}
+
+@media(max-width : 600px){
+    .mapImg{
+        height: 70vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -15%);
+    }
+    .containerDiv{
+        display: flex;
+        flex-direction: column;
+    }
+    .card1{
+        width: 90%;
+        transform: translate(-50%,10%);
+    }
+    .title{
+        width: 100%;
+    }
+    .card1, .card2{
+        padding : 1.5em 2em
+    }
+    .containerMobile{
+        width: 100%;
+        position: relative;
+        height: 70vh;
+        padding: 0em 1em;
+    }
+    .topTextMobile{
+        position : relative;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        font-size: 0.7em;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+}

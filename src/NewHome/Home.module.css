@@ -1,0 +1,1707 @@
+.home {
+  /* scroll-snap-type: y proximity; */
+  /* overflow-y: scroll; */
+  height: 100vh;
+  /* overflow-x: hidden; */
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.section {
+  transform: translate(0, 50%);
+  opacity: 0;
+
+  visibility: hidden;
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+  will-change: opacity, visibility;
+}
+.isVisible {
+  scroll-snap-align: start;
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.useSection {
+  position: relative;
+  width: 100vw;
+  /* height: 100vh; */
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.useContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.twoSections {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  overflow-y: scroll;
+  /* scroll-snap-type: y mandatory; */
+}
+
+.twoSections::-webkit-scrollbar {
+  width: 0px;
+}
+
+.leftUse {
+  height: 100%;
+  width: 40%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* overflow: hidden; */
+}
+
+.useText {
+  position: relative;
+  height: 100vh;
+  /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  padding-left: 4rem;
+  /* display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; */
+  overscroll-behavior: y contain;
+  scroll-snap-points-y: repeat(56.25vh);
+  /* for mozilla */
+  scrollbar-width: none;
+}
+
+.useText::-webkit-scrollbar {
+  display: none;
+}
+
+.useDetail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  line-height: 1em;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 80%;
+  margin: auto;
+  /* scroll-snap-align: center; */
+}
+
+.phoneImg {
+  /* display: inline-block; */
+  position: relative;
+  height: fit-content;
+  overflow: hidden;
+  /* flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+.phoneImg > img {
+  width: 40vw;
+  height: auto;
+  position: relative;
+  z-index: 4;
+}
+
+.carousel {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.7rem;
+}
+
+.carousel > img {
+  position: relative;
+  width: 38vw;
+  height: auto;
+  z-index: -1;
+}
+
+.rightUse {
+  top: 0rem;
+  position: sticky;
+  background-color: white;
+  z-index: 4;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.enterImgRev {
+  transform: translateX(-98%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  /* animation-delay: 0.7s; */
+}
+.enterImgActiveRev {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  animation-delay: 0.7s;
+}
+.exitImgActive {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  animation-delay: 0.7s;
+}
+.exitImgRev {
+  transform: translateX(50%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  /* animation-delay: 0.5s; */
+}
+.enterImg {
+  transform: translateY(98%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  /* animation-delay: 0.7s; */
+}
+.enterImgActive {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  animation-delay: 0.7s;
+}
+.exitImgActive {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  animation-delay: 0.7s;
+}
+.exitImg {
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  /* animation-delay: 0.5s; */
+}
+/* Use Case Design End */
+
+/* Landing Page Design */
+.landing {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-family: "Poppins", sans-serif !important;
+  display: flex;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.services {
+  scroll-snap-align: start;
+}
+
+.about {
+  scroll-snap-align: start;
+}
+
+.logoCont > img {
+  width: 3rem;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0.4rem 2rem 4rem;
+}
+
+.navLinks {
+  font-size: 1rem;
+  display: flex;
+  padding-left: 1rem;
+  min-width: 10rem;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.leftContainer {
+  position: relative;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.rightContainer {
+  position: relative;
+  background-color: #62d8b1;
+  height: 100%;
+  width: 40%;
+}
+
+.navBtn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: rgba(240, 248, 255, 0.904);
+  color: #62d8b1 !important;
+  z-index: 2;
+}
+
+.joinApp {
+  line-height: 1em;
+}
+.introduction {
+  padding-top: 2rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.5rem;
+}
+
+.lead {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 400;
+  flex-basis: 100%;
+}
+
+.secondary {
+  font-family: inherit;
+  font-size: 0.8rem;
+  width: 80%;
+}
+
+.bookBtn {
+  margin-top: 5rem;
+  font-size: 0.8rem;
+  color: white !important;
+  background: rgb(98, 216, 177);
+  background: linear-gradient(
+    90deg,
+    rgba(98, 216, 177, 1) 0%,
+    rgba(0, 213, 99, 1) 100%
+  );
+  padding: 0.6rem;
+  max-width: fit-content;
+  border-radius: 11px;
+  box-shadow: -1px 2px 19px -10px rgba(7, 8, 91, 0.75);
+  -webkit-box-shadow: -1px 2px 19px -10px rgba(7, 8, 91, 0.75);
+  -moz-box-shadow: -1px 2px 19px -10px rgba(7, 8, 91, 0.75);
+  cursor: pointer;
+}
+
+.doctor {
+  position: absolute;
+  right: -30%;
+  height: fit-content;
+  bottom: 0;
+  display: none;
+}
+
+.doctor > img {
+  height: 70vh;
+  width: auto;
+}
+
+/* Landing Page Design */
+
+/* Services Design */
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", "Montserrat", sans-serif;
+  padding-bottom: 2rem;
+}
+
+.servicesHeader {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.serviceText {
+  padding-top: 1.5rem;
+  font-size: 2rem;
+  font-family: inherit;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.serviceText::after {
+  content: "";
+  background-color: #62d8b1;
+  width: 60%;
+  height: 4px;
+}
+
+.cardContainer {
+  display: flex;
+
+  padding: 0.5rem 0.5rem;
+  width: 100vw;
+  overflow-x: scroll;
+}
+
+.cardContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+  padding: 1rem;
+  min-width: 40vw;
+  width: fit-content;
+  height: fit-content;
+  transition: all 0.5s;
+  border-radius: 28px;
+}
+
+.cardBody:hover {
+  box-shadow: -1px 1px 19px -10px rgba(7, 8, 91, 0.75);
+  -webkit-box-shadow: -1px 1px 19px -10px rgba(7, 8, 91, 0.75);
+  -moz-box-shadow: -1px 1px 19px -10px rgba(7, 8, 91, 0.75);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.ic {
+  padding-bottom: 1rem;
+}
+
+.ic > img {
+  width: 4rem;
+}
+
+.lead1 {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.desc {
+  font-family: inherit;
+  font-size: 0.6rem;
+  text-align: justify;
+  font-weight: 200;
+}
+
+/* Services Design */
+
+/* About Design */
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins", "Montserrat", sans-serif;
+}
+
+.aboutBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.doc2 {
+  position: relative;
+  width: 30%;
+}
+
+.description {
+  position: relative;
+  width: 70%;
+}
+
+.doc2Img {
+  width: 90%;
+  height: auto;
+}
+
+.desc2 {
+  padding: 0rem 0rem 0rem 0rem;
+  font-family: inherit;
+  font-size: 0.6rem;
+  text-align: justify;
+  font-weight: 200;
+}
+
+/* About Design */
+
+/* Footer Design */
+.footerSection {
+  width: 100vw;
+  font-family: "Poppins", "Montserrat", sans-serif;
+  scroll-snap-align: start;
+}
+
+.banner {
+  width: inherit;
+  position: relative;
+}
+
+.textOnImg {
+  position: absolute;
+  top: 0.5rem;
+  color: white;
+  font-family: inherit;
+  font-size: 0.8rem;
+  width: 40%;
+  padding: 0.2rem 1rem;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.appBtns {
+  display: flex;
+  padding-top: 1rem;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.store {
+  width: 100%;
+}
+
+.fback {
+  width: inherit;
+  height: inherit;
+}
+
+.flogo {
+  width: 2rem;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  color: white;
+
+  padding: 2rem;
+  padding-bottom: 3rem;
+}
+
+.footerinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerHead {
+  font-size: 0.5rem;
+  font-weight: 400;
+}
+
+.footerdetails {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.flinks {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding-bottom: 1em;
+}
+
+.slink {
+  font-size: 0.8rem !important;
+  width: 0.5rem;
+  color: white !important;
+}
+
+.footerl {
+  font-size: 0.4rem;
+  cursor: pointer;
+}
+
+.footerBgImg {
+  width: inherit;
+}
+
+.copyright {
+  position: relative;
+  text-align: center;
+  font-size: 0.5rem;
+  font-weight: 200;
+  padding-bottom: 2rem;
+}
+/* Footer Design */
+
+/* Doctor Review Begin */
+
+.docrevContainer {
+  display: flex;
+  overflow-x: hidden;
+  font-family: "Poppins", "Montserrat", sans-serif;
+  scroll-snap-align: start;
+}
+
+.kamehameha {
+  width: 50%;
+  position: relative;
+  z-index: 1000;
+}
+
+.kamehameha > img {
+  width: 50vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.textBox {
+  position: relative;
+  display: flex;
+}
+
+.quote {
+  padding-right: 1rem;
+}
+
+.quote > img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.horizontalContainer {
+  width: 50%;
+  display: flex;
+  overflow-x: scroll;
+  cursor: grab;
+  padding: 1rem;
+  padding-top: 3rem;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  /* moz */
+  scrollbar-width: none;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.horizontalContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.avatar {
+  transform: scale(0.6) translateY(-50%);
+}
+
+.cardTestimonial {
+  /* min-width: 70%; */
+  /* padding: 4rem 4rem 1rem 4rem; */
+  min-width: 65vw;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  font-weight: 200;
+  align-items: flex-start;
+
+  margin: 0 1rem 0rem 1rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  line-height: 1.5em;
+  font-size: 0.6rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.cardTestimonial:last-child {
+  margin-right: 6rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  height: min-content;
+}
+
+.profile > * {
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.name {
+  font-weight: 300;
+}
+
+.role {
+  letter-spacing: 0.1em;
+}
+
+/* Doctor Review End */
+
+@media (min-width: 400px) {
+  .kamehameha > img {
+    position: relative;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Use Case Design */
+
+  .useSection {
+    width: 100vw;
+    /* height: 100vh; */
+  }
+
+  .useContainer {
+    width: 100%;
+    height: 100%;
+  }
+
+  .twoSections {
+    width: 100%;
+    height: 100%;
+  }
+
+  .leftUse {
+    height: 100%;
+    width: 70%;
+  }
+
+  .useText {
+    height: 100vh;
+  }
+
+  .useText::-webkit-scrollbar {
+    display: none;
+  }
+
+  .useDetail {
+    height: 100vh;
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 80%;
+  }
+
+  .phoneImg {
+    /* display: inline-block; */
+    /* position: relative;
+    height: fit-content;
+    overflow: hidden; */
+    /* flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+  }
+
+  .phoneImg > img {
+    width: 25vw;
+    /* height: auto;
+    position: relative;
+    z-index: 4; */
+  }
+
+  .carousel {
+    /* position: absolute; */
+    top: 0.6rem;
+    left: 0.7rem;
+  }
+
+  .carousel > img {
+    /* position: relative; */
+    width: 24vw;
+    height: auto;
+    z-index: -1;
+  }
+  .rightUse {
+    height: 100%;
+    width: 50%;
+  }
+
+  .enterImg {
+    transform: translateY(98%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    /* animation-delay: 0.7s; */
+  }
+  .enterImgActive {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    animation-delay: 0.7s;
+  }
+  .exitImgActive {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    animation-delay: 0.7s;
+  }
+  .exitImg {
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    /* animation-delay: 0.5s; */
+  }
+  /* Use Case Design End */
+
+  /* Landing Page Design */
+  .landing {
+    width: 100vw;
+    height: 60vh;
+    position: relative;
+    font-family: "Poppins", sans-serif !important;
+    display: flex;
+  }
+
+  .logoCont > img {
+    width: 2rem;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 0rem 4rem;
+  }
+
+  .navLinks {
+    display: flex;
+    min-width: 14rem;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .leftContainer {
+    position: relative;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .rightContainer {
+    position: relative;
+    background-color: #62d8b1;
+    height: 100%;
+    width: 40%;
+  }
+
+  .navBtn {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1rem;
+    background-color: rgba(240, 248, 255, 0.904);
+    color: #62d8b1 !important;
+    padding: 0.8rem;
+    border-radius: 12px;
+    width: 6rem;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .introduction {
+    padding-top: 2rem;
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.5rem;
+  }
+
+  .lead {
+    font-family: inherit;
+    font-size: 2.5rem;
+    font-weight: 400;
+    flex-basis: 100%;
+  }
+
+  .secondary {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1.1rem;
+    width: 80%;
+  }
+
+  .bookBtn {
+    margin-top: 5rem;
+    font-size: 1.2rem;
+    color: white !important;
+    background: rgb(98, 216, 177);
+    background: linear-gradient(
+      90deg,
+      rgba(98, 216, 177, 1) 0%,
+      rgba(0, 213, 99, 1) 100%
+    );
+    padding: 1rem 1.1rem;
+    max-width: fit-content;
+    border-radius: 15px;
+    box-shadow: -1px 2px 19px -10px rgba(7, 8, 91, 0.75);
+    -webkit-box-shadow: -1px 2px 19px -10px rgba(7, 8, 91, 0.75);
+    -moz-box-shadow: -1px 2px 19px -10px rgba(7, 8, 91, 0.75);
+    cursor: pointer;
+  }
+
+  .doctor {
+    position: absolute;
+    right: 5%;
+    height: fit-content;
+    bottom: 0;
+    display: block;
+  }
+
+  .doctor > img {
+    height: 50vh;
+    width: auto;
+  }
+
+  /* Landing Page Design */
+
+  /* Services Design */
+  .servicesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", "Montserrat", sans-serif;
+    padding-bottom: 2rem;
+  }
+
+  .servicesHeader {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .serviceText {
+    padding-top: 1.5rem;
+    font-size: 2rem;
+    font-family: inherit;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .serviceText::after {
+    content: "";
+    background-color: #62d8b1;
+    width: 60%;
+    height: 4px;
+  }
+
+  .cardContainer {
+    display: flex;
+    padding: 1rem 1rem;
+  }
+
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+    padding: 2rem;
+    min-width: 20vw;
+    width: fit-content;
+    height: fit-content;
+    transition: all 0.5s;
+    border-radius: 28px;
+  }
+
+  .cardBody:hover {
+    box-shadow: -1px 1px 19px -10px rgba(7, 8, 91, 0.75);
+    -webkit-box-shadow: -1px 1px 19px -10px rgba(7, 8, 91, 0.75);
+    -moz-box-shadow: -1px 1px 19px -10px rgba(7, 8, 91, 0.75);
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+
+  .ic {
+    padding-bottom: 1rem;
+  }
+
+  .lead1 {
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .desc {
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
+
+  /* Services Design */
+
+  /* About Design */
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", "Montserrat", sans-serif;
+  }
+
+  .aboutBody {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 1.5rem;
+  }
+
+  .doc2 {
+    position: relative;
+    width: 40%;
+  }
+
+  .description {
+    position: relative;
+    width: 60%;
+    float: left;
+  }
+
+  .doc2Img {
+    width: 70%;
+    height: auto;
+  }
+
+  .desc2 {
+    padding: 0rem 2rem 0rem 0rem;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
+
+  /* About Design */
+
+  /* Footer Design */
+  .footerSection {
+    width: 100vw;
+    font-family: "Poppins", "Montserrat", sans-serif;
+  }
+
+  .banner {
+    width: inherit;
+    position: relative;
+  }
+
+  .textOnImg {
+    position: absolute;
+    top: 2rem;
+    color: white;
+    font-family: inherit;
+    font-size: 2rem;
+    width: 40%;
+    padding: 2rem 4rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .appBtns {
+    display: flex;
+    padding-top: 3rem;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .store {
+    width: 100%;
+  }
+
+  .fback {
+    width: inherit;
+    height: inherit;
+  }
+
+  .flogo {
+    width: 3rem;
+  }
+
+  .footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+  }
+
+  .footerinfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerHead {
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+  }
+
+  .footerdetails {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+  }
+
+  .flinks {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding: 4rem;
+    padding-bottom: 8rem;
+  }
+
+  .slink {
+    font-size: 1.5rem !important;
+    width: 3rem;
+    margin-right: 0.3em;
+    color: white !important;
+  }
+
+  .footerl {
+    padding-top: 0.5em;
+
+    font-size: 0.5rem;
+  }
+
+  .footerBg {
+    width: inherit;
+    position: relative;
+  }
+
+  .copyright {
+    position: relative;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1rem;
+  }
+  /* Footer Design */
+
+  /* Doctor Review Begin */
+
+  .kamehameha {
+    width: 50%;
+  }
+
+  .kamehameha > img {
+    width: 45vw;
+  }
+
+  .textBox {
+    position: relative;
+    display: flex;
+  }
+
+  .quote {
+    padding-right: 1rem;
+    margin-top: -2rem;
+  }
+
+  .quote > img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .horizontalContainer {
+    width: 50%;
+    display: flex;
+    overflow-x: scroll;
+    cursor: grab;
+    padding: 1rem;
+    padding-top: 3rem;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    /* moz */
+    scrollbar-width: none;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .horizontalContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cardTestimonial {
+    min-width: 50vw;
+    /* padding: 4rem 4rem 1rem 4rem; */
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    margin: 0 3rem 0rem 3rem;
+    padding: 3rem 2rem 2rem 1rem;
+    scroll-snap-align: center;
+    font-size: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  .cardTestimonial:last-child {
+    margin-right: 6rem;
+  }
+
+  .profile > * {
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+
+  .name {
+    font-weight: 300;
+  }
+
+  .role {
+    letter-spacing: 0.1em;
+  }
+
+  /* Doctor Review End */
+}
+
+@media (min-width: 1024px) {
+  /* use */
+  .home {
+    scroll-snap-type: y proximity;
+  }
+  .useSection {
+    /* height: 100vh; */
+  }
+  /* .useText{
+        position: relative;
+        height: 70vh;
+        
+        
+        scroll-snap-points-y: repeat(70vh);
+        
+    } */
+  /* .useDetail{
+        
+        height: 80vh;
+        
+    } */
+  .phoneImg > img {
+    width: 25vw;
+  }
+
+  .carousel > img {
+    width: 23vw;
+  }
+  /* useEnd */
+  .landing {
+    width: 100vw;
+    height: calc(0.7 * 100vw);
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+  }
+  .logoCont > img {
+    width: 3rem;
+  }
+  .lead {
+    font-family: inherit;
+    font-size: 3rem;
+    flex-basis: 100%;
+  }
+  .doctor {
+    position: absolute;
+    right: 10%;
+    height: fit-content;
+    bottom: 0;
+  }
+  .secondary {
+    font-family: inherit;
+    font-size: 1.3rem;
+    width: 80%;
+  }
+  .doctor > img {
+    height: calc(100vw * 0.6);
+    width: auto;
+  }
+  .desc2 {
+    padding: 0rem 2rem 0rem 0rem;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+
+  .quote {
+    /* top: 6rem; */
+  }
+  .cardTestimonial {
+    min-width: 40vw;
+    height: fit-content;
+
+    position: relative;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* use */
+  .useSection {
+    /* height: 100vh; */
+  }
+  .useText {
+    position: relative;
+    height: 100vh;
+
+    scroll-snap-points-y: repeat(100vh);
+  }
+  .useDetail {
+    height: 100vh;
+  }
+  .phoneImg > img {
+    width: 15vw;
+  }
+
+  .carousel > img {
+    width: 14vw;
+  }
+  /* USe end */
+}
+@media (min-width: 1280px) {
+  .cardTestimonial {
+    min-width: 30vw;
+    height: fit-content;
+
+    position: relative;
+  }
+}
+
+@media (min-width: 1366px) {
+  /* use */
+  .useSection {
+    /* height: 100vh; */
+  }
+  .useText {
+    position: relative;
+    height: 100vh;
+
+    scroll-snap-points-y: repeat(100vh);
+  }
+  .useDetail {
+    height: 100vh;
+  }
+  .phoneImg > img {
+    width: 15vw;
+  }
+
+  .carousel > img {
+    width: 14vw;
+  }
+  /* USe end */
+  /* Landing Page Design */
+  .landing {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+  }
+
+  .kamehameha {
+    margin-right: 2rem;
+  }
+  .logoCont > img {
+    width: 3.5rem;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem 0rem 8rem;
+  }
+
+  .navLinks {
+    display: flex;
+    min-width: 18rem;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .leftContainer {
+    position: relative;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .rightContainer {
+    position: relative;
+    background-color: #62d8b1;
+    height: 100%;
+    width: 30%;
+  }
+
+  .navBtn {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1.3rem;
+    background-color: rgba(240, 248, 255, 0.904);
+    color: #62d8b1 !important;
+    padding: 1rem;
+    border-radius: 12px;
+    width: 8rem;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .introduction {
+    padding-top: 2rem;
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5rem;
+  }
+
+  .lead {
+    font-family: inherit;
+    font-size: 3rem;
+    flex-basis: 100%;
+  }
+
+  .secondary {
+    font-family: inherit;
+    font-size: 1.5rem;
+    width: 80%;
+  }
+
+  .bookBtn {
+    margin-top: 8rem;
+    font-size: 1.5rem;
+    color: white !important;
+    background: rgb(98, 216, 177);
+    background: linear-gradient(
+      90deg,
+      rgba(98, 216, 177, 1) 0%,
+      rgba(0, 213, 99, 1) 100%
+    );
+    padding: 1rem 1.3rem;
+    max-width: fit-content;
+    border-radius: 15px;
+    box-shadow: -1px 2px 19px -10px rgba(7, 8, 91, 0.75);
+    -webkit-box-shadow: -1px 2px 19px -10px rgba(7, 8, 91, 0.75);
+    -moz-box-shadow: -1px 2px 19px -10px rgba(7, 8, 91, 0.75);
+    cursor: pointer;
+  }
+
+  .doctor {
+    position: absolute;
+    right: 5%;
+    height: fit-content;
+    bottom: 0;
+  }
+
+  .doctor > img {
+    height: 70vh;
+    width: auto;
+  }
+  /* Landing Page Design */
+
+  /* Services Design */
+  .servicesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", "Montserrat", sans-serif;
+    padding-bottom: 2rem;
+  }
+
+  .servicesHeader {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .serviceText {
+    padding-top: 3rem;
+    font-size: 2.5rem;
+    font-family: inherit;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .serviceText::after {
+    content: "";
+    background-color: #62d8b1;
+    width: 60%;
+    height: 4px;
+  }
+
+  .cardContainer {
+    display: flex;
+    padding: 1rem 2rem;
+  }
+
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+    padding: 2rem;
+    width: fit-content;
+    height: fit-content;
+    transition: all 0.5s;
+    border-radius: 28px;
+  }
+
+  .cardBody:hover {
+    box-shadow: -1px 1px 19px -10px rgba(7, 8, 91, 0.75);
+    -webkit-box-shadow: -1px 1px 19px -10px rgba(7, 8, 91, 0.75);
+    -moz-box-shadow: -1px 1px 19px -10px rgba(7, 8, 91, 0.75);
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+
+  .ic {
+    padding-bottom: 1rem;
+  }
+
+  .lead1 {
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .desc {
+    font-family: inherit;
+    font-size: 1.3rem;
+  }
+
+  /* Services Design */
+
+  /* About Design */
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", "Montserrat", sans-serif;
+  }
+
+  .aboutBody {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 3rem;
+  }
+
+  .doc2 {
+    position: relative;
+    width: 40%;
+  }
+
+  .description {
+    position: relative;
+    width: 60%;
+    float: left;
+  }
+
+  .doc2Img {
+    width: 70%;
+    height: auto;
+  }
+
+  .desc2 {
+    padding: 0rem 2rem 0rem 0rem;
+    font-family: inherit;
+    font-size: 1.4rem;
+  }
+
+  /* About Design */
+
+  /* Footer Design */
+  .footerSection {
+    width: 100vw;
+    font-family: "Poppins", "Montserrat", sans-serif;
+  }
+
+  .banner {
+    width: inherit;
+    position: relative;
+  }
+
+  .textOnImg {
+    position: absolute;
+    top: 1rem;
+    color: white;
+    font-family: inherit;
+    font-size: 4.5rem;
+    width: 40%;
+    padding: 2rem 4rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .appBtns {
+    display: flex;
+    padding-top: 8rem;
+    align-items: center;
+  }
+
+  .fback {
+    width: inherit;
+    height: inherit;
+  }
+
+  .footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .footerinfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerHead {
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+  }
+
+  .footerdetails {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+  }
+
+  .flinks {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding: 8rem;
+    padding-bottom: 12rem;
+  }
+
+  .slink {
+    font-size: 2rem;
+    width: 3rem;
+    color: white !important;
+  }
+
+  .footerl {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+
+  .copyright {
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+  }
+  /* Footer Design */
+
+  .quote {
+    top: 8rem;
+  }
+  .cardTestimonial {
+    min-width: 40vw;
+
+    position: relative;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .doctor {
+    position: absolute;
+    right: 8%;
+    height: fit-content;
+    bottom: 0;
+  }
+
+  .doctor > img {
+    height: 80vh;
+    width: auto;
+  }
+
+  .quote {
+    top: 10rem;
+  }
+
+  .kamehameha {
+    width: 40%;
+  }
+  .horizontalContainer {
+    width: 60%;
+  }
+  .kamehameha > img {
+    width: 90%;
+    height: 40vw;
+  }
+  .cardTestimonial {
+    min-width: 25vw;
+
+    position: relative;
+    font-size: 1.2rem;
+  }
+}
